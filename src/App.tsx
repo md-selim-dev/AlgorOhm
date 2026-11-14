@@ -27,24 +27,12 @@ import {
   Whitepaper,
 } from './types/robotics';
 
-function resolvePageFromHash(): WebsitePageId {
-  if (typeof window === 'undefined') return 'home';
-  const rawHash = window.location.hash.replace('#', '').trim().toLowerCase();
-  if (rawHash === 'platforms' || rawHash === 'inspector') return 'platforms';
-  if (rawHash === 'architecture') return 'architecture';
-  if (
-    rawHash === 'deployments' ||
-    rawHash === 'field-gallery' ||
-    rawHash === 'roi-configurator'
-  ) {
-    return 'deployments';
-  }
-  if (rawHash === 'research') return 'research';
-  return 'home';
-}
+import { getPageHref, resolvePageFromLocation } from './utils/routes';
 
 export default function App() {
-  const [activePage, setActivePage] = useState<WebsitePageId>(resolvePageFromHash);
+  const [activePage, setActivePage] = useState<WebsitePageId>(
+    () => resolvePageFromLocation().page
+  );
   const [selectedRobotId, setSelectedRobotId] = useState<string>('ohm-x1');
 
   // Modals & Interactive Drawers
@@ -67,9 +55,10 @@ export default function App() {
   const handleNavigate = useCallback((page: WebsitePageId, sectionId?: string) => {
     setActivePage(page);
     if (typeof window !== 'undefined') {
-      const nextHash = sectionId ? `#${sectionId}` : page === 'home' ? '#home' : `#${page}`;
-      if (window.location.hash !== nextHash) {
-        window.history.pushState({ page, sectionId }, '', nextHash);
+      const nextUrl = getPageHref(page, sectionId);
+      const currentUrl = `${window.location.pathname}${window.location.hash}`;
+      if (currentUrl !== nextUrl) {
+        window.history.pushState({ page, sectionId }, '', nextUrl);
       }
 
       if (sectionId) {
@@ -89,10 +78,36 @@ export default function App() {
     }
   }, []);
 
+  // Scroll to deep-linked section on initial load if present
+  useEffect(() => {
+    const initial = resolvePageFromLocation();
+    if (initial.sectionId) {
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          const targetEl = document.getElementById(initial.sectionId!);
+          if (targetEl) {
+            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 60);
+      });
+    }
+  }, []);
+
   // Listen to browser Back/Forward navigation
   useEffect(() => {
     const onHashOrPopState = () => {
-      setActivePage(resolvePageFromHash());
+      const resolved = resolvePageFromLocation();
+      setActivePage(resolved.page);
+      if (resolved.sectionId) {
+        requestAnimationFrame(() => {
+          setTimeout(() => {
+            const targetEl = document.getElementById(resolved.sectionId!);
+            if (targetEl) {
+              targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }, 40);
+        });
+      }
     };
     window.addEventListener('popstate', onHashOrPopState);
     window.addEventListener('hashchange', onHashOrPopState);

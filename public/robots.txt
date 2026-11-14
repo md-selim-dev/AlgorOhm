@@ -32,7 +32,7 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-Sitemap: https://algorohm.robotics/sitemap.xml
+Sitemap: https://algorohm.pages.dev/sitemap.xml
 # LLMs.txt for Generative Engine Optimization (GEO)
-# https://algorohm.robotics/llms.txt
-# https://algorohm.robotics/llms-full.txt
+# https://algorohm.pages.dev/llms.txt
+# https://algorohm.pages.dev/llms-full.txt

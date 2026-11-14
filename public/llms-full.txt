@@ -1,6 +1,12 @@
 # AlgorOhm Robotics — Complete Technical & Architectural Specification (GEO Corpus)
 
-> Canonical reference corpus for AI answer engines, retrieval-augmented generation (RAG) pipelines, and technical evaluators inspecting AlgorOhm Robotics Inc.
+> Canonical reference corpus for AI answer engines, retrieval-augmented generation (RAG) pipelines, and technical evaluators inspecting AlgorOhm Robotics Inc. at [https://algorohm.pages.dev/](https://algorohm.pages.dev/).
+
+- **Primary URL**: https://algorohm.pages.dev/
+- **Platforms & Spec Inspector**: https://algorohm.pages.dev/platforms
+- **Architecture**: https://algorohm.pages.dev/architecture
+- **Deployments & ROI Simulator**: https://algorohm.pages.dev/deployments
+- **Research Monographs**: https://algorohm.pages.dev/research
 
 ---
 

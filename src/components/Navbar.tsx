@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
 import { WebsitePageId } from '../types/robotics';
+import { getPageHref } from '../utils/routes';
 import { AlgorOhmLogo } from './ui/AlgorOhmLogo';
 
 interface NavbarProps {
@@ -39,7 +40,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-4">
         {/* Brand Lockup */}
         <a
-          href="#home"
+          href={getPageHref('home')}
           onClick={(e) => handleNavClick(e, 'home')}
           className="flex items-center gap-2.5 sm:gap-3.5 min-w-0 group focus-visible:outline-2 focus-visible:outline-cyan-400 rounded-lg"
           aria-label="AlgorOhm Robotics Home"
@@ -72,7 +73,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             return (
               <a
                 key={item.id}
-                href={`#${item.id}`}
+                href={getPageHref(item.id)}
                 onClick={(e) => handleNavClick(e, item.id)}
                 aria-current={isActive ? 'page' : undefined}
                 className={`px-4 py-2 rounded-lg text-xs xl:text-sm font-medium transition-all whitespace-nowrap focus-visible:outline-2 focus-visible:outline-cyan-400 ${
@@ -129,7 +130,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               return (
                 <a
                   key={item.id}
-                  href={`#${item.id}`}
+                  href={getPageHref(item.id)}
                   onClick={(e) => handleNavClick(e, item.id)}
                   aria-current={isActive ? 'page' : undefined}
                   className={`p-3 rounded-xl border transition-colors flex flex-col justify-between ${

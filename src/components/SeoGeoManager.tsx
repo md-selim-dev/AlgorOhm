@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { ROBOT_PLATFORMS } from '../data/roboticsData';
 import { FieldGalleryItem, WebsitePageId, Whitepaper } from '../types/robotics';
+import { getCanonicalUrl, SITE_ORIGIN } from '../utils/routes';
 
 interface SeoGeoManagerProps {
   activePage: WebsitePageId;
@@ -77,6 +78,18 @@ export const SeoGeoManager: React.FC<SeoGeoManagerProps> = ({
       ogTitleMeta.setAttribute('content', nextTitle);
     }
 
+    const canonicalUrl = getCanonicalUrl(activePage);
+
+    const canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (canonicalLink) {
+      canonicalLink.setAttribute('href', canonicalUrl);
+    }
+
+    const ogUrlMeta = document.querySelector('meta[property="og:url"]');
+    if (ogUrlMeta) {
+      ogUrlMeta.setAttribute('content', canonicalUrl);
+    }
+
     const ogDescMeta = document.querySelector('meta[property="og:description"]');
     if (ogDescMeta) {
       ogDescMeta.setAttribute('content', nextDescription);
@@ -94,7 +107,8 @@ export const SeoGeoManager: React.FC<SeoGeoManagerProps> = ({
     const activeEntitySchema = {
       '@context': 'https://schema.org',
       '@type': 'Product',
-      '@id': `https://algorohm.robotics/#active-inspector-${activeRobot.id}`,
+      '@id': `${SITE_ORIGIN}/platforms#active-inspector-${activeRobot.id}`,
+      url: `${SITE_ORIGIN}/platforms#inspector`,
       name: activeRobot.name,
       category: activeRobot.category,
       description: activeRobot.description,

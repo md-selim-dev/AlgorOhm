@@ -433,7 +433,7 @@ export const HeroKinematicBench: React.FC<HeroKinematicBenchProps> = ({
             {/* Primary CTAs */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-1">
               <a
-                href="#platforms"
+                href="/platforms"
                 onClick={(e) => {
                   if (onNavigate) {
                     e.preventDefault();
@@ -446,7 +446,7 @@ export const HeroKinematicBench: React.FC<HeroKinematicBenchProps> = ({
                 <ChevronRight className="w-4 h-4" aria-hidden="true" />
               </a>
               <a
-                href="#architecture"
+                href="/architecture"
                 onClick={(e) => {
                   if (onNavigate) {
                     e.preventDefault();

@@ -2,6 +2,7 @@ import React from 'react';
 import { Award, Globe, MapPin, ShieldCheck } from 'lucide-react';
 import { ROBOT_PLATFORMS } from '../data/roboticsData';
 import { WebsitePageId } from '../types/robotics';
+import { getPageHref } from '../utils/routes';
 import { AlgorOhmLogo } from './ui/AlgorOhmLogo';
 
 interface FooterProps {
@@ -25,7 +26,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectRobot, onNavigate }) => 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10 pb-10 sm:pb-12 border-b border-slate-800/80">
           <div className="sm:col-span-2 lg:col-span-2 space-y-4">
             <a
-              href="#home"
+              href={getPageHref('home')}
               onClick={(e) => handlePageLink(e, 'home')}
               className="inline-flex items-center gap-3 focus-visible:outline-2 focus-visible:outline-cyan-400 rounded-lg"
             >
@@ -62,7 +63,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectRobot, onNavigate }) => 
               {ROBOT_PLATFORMS.map((r) => (
                 <li key={r.id}>
                   <a
-                    href="#inspector"
+                    href={getPageHref('platforms', 'inspector')}
                     onClick={(e) => {
                       e.preventDefault();
                       onSelectRobot(r.id);
@@ -84,7 +85,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectRobot, onNavigate }) => 
             <ul className="space-y-2.5 text-xs">
               <li>
                 <a
-                  href="#home"
+                  href={getPageHref('home')}
                   onClick={(e) => handlePageLink(e, 'home')}
                   className="hover:text-cyan-400 transition-colors focus-visible:outline-2 focus-visible:outline-cyan-400 rounded inline-block py-0.5"
                 >
@@ -93,7 +94,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectRobot, onNavigate }) => 
               </li>
               <li>
                 <a
-                  href="#platforms"
+                  href={getPageHref('platforms')}
                   onClick={(e) => handlePageLink(e, 'platforms')}
                   className="hover:text-cyan-400 transition-colors focus-visible:outline-2 focus-visible:outline-cyan-400 rounded inline-block py-0.5"
                 >
@@ -102,7 +103,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectRobot, onNavigate }) => 
               </li>
               <li>
                 <a
-                  href="#architecture"
+                  href={getPageHref('architecture')}
                   onClick={(e) => handlePageLink(e, 'architecture')}
                   className="hover:text-cyan-400 transition-colors focus-visible:outline-2 focus-visible:outline-cyan-400 rounded inline-block py-0.5"
                 >
@@ -111,7 +112,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectRobot, onNavigate }) => 
               </li>
               <li>
                 <a
-                  href="#deployments"
+                  href={getPageHref('deployments')}
                   onClick={(e) => handlePageLink(e, 'deployments')}
                   className="hover:text-cyan-400 transition-colors focus-visible:outline-2 focus-visible:outline-cyan-400 rounded inline-block py-0.5"
                 >
@@ -120,7 +121,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectRobot, onNavigate }) => 
               </li>
               <li>
                 <a
-                  href="#research"
+                  href={getPageHref('research')}
                   onClick={(e) => handlePageLink(e, 'research')}
                   className="hover:text-cyan-400 transition-colors focus-visible:outline-2 focus-visible:outline-cyan-400 rounded inline-block py-0.5"
                 >

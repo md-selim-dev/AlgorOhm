@@ -21,8 +21,9 @@
 - **TR-2025-11 (November 2025)**: *Zero-Deadlock Decentralized Conflict-Based Search for 200+ Heterogeneous AMRs over Wi-Fi 7 TSN* — A. Patel, L. Meyer (+29% fleet throughput, 99.998% availability across 180 units).
 
 ## Full Technical Documentation & Specs
-- [Full LLM Technical Reference (llms-full.txt)](https://algorohm.robotics/llms-full.txt)
-- [Robotic Platforms & Spec Inspector](https://algorohm.robotics/#platforms)
-- [Algor × Ohm Dual-Core Stack](https://algorohm.robotics/#architecture)
-- [Enterprise Fleet ROI Simulator](https://algorohm.robotics/#roi-configurator)
-- [Lab Monographs & Whitepapers](https://algorohm.robotics/#research)
+- [AlgorOhm Robotics Home & Kinematic Bench](https://algorohm.pages.dev/)
+- [Full LLM Technical Reference (llms-full.txt)](https://algorohm.pages.dev/llms-full.txt)
+- [Robotic Platforms & Spec Inspector](https://algorohm.pages.dev/platforms)
+- [Algor × Ohm Dual-Core Stack](https://algorohm.pages.dev/architecture)
+- [Field Deployments & Enterprise Fleet ROI Simulator](https://algorohm.pages.dev/deployments#roi-configurator)
+- [Lab Monographs & Whitepapers](https://algorohm.pages.dev/research)

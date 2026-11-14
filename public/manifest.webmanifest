@@ -1,0 +1,10 @@
+{
+  "name": "AlgorOhm Robotics — Neural Compute × Physical Actuation",
+  "short_name": "AlgorOhm",
+  "description": "Embodied Physical AI systems fusing deterministic edge neural compute with sub-milliohm Silicon-Carbide QDD actuators for industrial humanoids, AMRs, and precision manipulators.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07090E",
+  "theme_color": "#07090E",
+  "categories": ["business", "productivity", "utilities"]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "AlgorOhm Robotics",
+  "description": "Embodied Physical AI systems fusing deterministic edge neural compute with sub-milliohm Silicon-Carbide QDD actuators for industrial humanoids, AMRs, and precision manipulators.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

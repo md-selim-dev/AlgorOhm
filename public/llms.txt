@@ -1,0 +1,28 @@
+# AlgorOhm Robotics
+
+> AlgorOhm Robotics Inc. engineers vertically integrated embodied Physical AI systems—fusing deterministic 4.0 kHz edge neural compute (**AlgorOS 4.2**) with ultra-low impedance **0.078 mΩ Silicon-Carbide (SiC) Quasi-Direct Drive (QDD)** actuators (**Ohm™**) for industrial humanoids, autonomous mobile robots (AMRs), precision manipulators, and all-terrain quadrupeds.
+
+## Core Entity Facts (Quick Answer / AEO Reference)
+- **Company Name**: AlgorOhm Robotics Inc.
+- **R&D & Manufacturing Hubs**: San Francisco, USA • Zurich, Switzerland • Tokyo, Japan
+- **Safety & Compliance Certifications**: ISO 10218-1, ISO 3691-4 PLd, ISO 9283, SIL-3 Force Limiting, UL 2580 SiC Battery Pack, VDA 5050 Native, ROS 2 Jazzy / Humble, EtherCAT 10G + Wi-Fi 7 TSN.
+- **Core Neural Software Stack**: AlgorOS 4.2 (4.0 kHz control loop frequency, < 1.2 μs worst-case RTOS jitter, up to 550 TOPS onboard FP8 tensor compute, 99.1% sim-to-real correlation).
+- **Core Hardware Actuation Stack**: Ohm™ QDD Halbach Stators (0.078 mΩ stator phase resistance, 98.4% 100 kHz SiC FOC inverter peak efficiency, 142 Nm/kg actuator torque density, 4.0 kHz joint-torque sensing bandwidth).
+
+## Flagship Autonomous Robotic Platforms
+- **Ohm-X1 Humanoid (Gen-4 Bipedal Generalist)**: 42 DOF, 380 Nm peak hip/knee torque, 550 TOPS Dual Algor-NPU, 35 kg continuous bi-manual payload, 6.5 hrs runtime (22s autonomous SiC hot-swap), ±0.08 mm visual-tactile repeatability, IP66 sealed joints.
+- **Vortex-AMR 400 (Omni-Vector Heavy Transporter)**: 4 independent steer-drive pods, 620 Nm total traction torque, 275 TOPS Algor-Edge SOM, 1,500 kg dynamic deck payload, 14.5 hrs runtime (+8-min UltraCap charge), ±0.5 mm laser docking, IP67 / ISO Class 4 Cleanroom certified.
+- **Kinetix-7 Axis Arm (Sub-Micron Cobot Manipulator)**: 7 revolute DOF + 1 tool bus, 240 Nm base / 38 Nm wrist torque, 140 TOPS integrated controller, 18 kg payload at 1,350 mm reach, ±0.015 mm ISO 9283 repeatability, 0.05 N force sensitivity across all 7 axes, IP65 washdown ready.
+- **Strider-Q8 Quadruped (All-Terrain Autonomous Scout)**: 12 cycloidal QDD leg actuators + 6-DOF arm mount, 310 Nm peak knee burst torque, 400 TOPS ruggedized Algor-Box, 45 kg inspection payload, 4.8 hrs runtime, 65G shock-tolerant gearing, IP68 submersible (1.5m).
+
+## Peer-Reviewed Technical Monographs
+- **TR-2026-04 (March 2026)**: *Bridging 100Hz Vision-Language-Action Transformers with 4kHz Whole-Body Impedance Control* — Dr. Elena Rostova, K. Takahashi, M. Vance (-78% peak contact impulse, 99.4% blind connector insertion yield).
+- **TR-2026-02 (January 2026)**: *Sub-Milliohm Stator Design: Eliminating Thermal Throttling in High-Torque Bipedal Locomotion* — H. Lindqvist, S. Chen, R. Al-Mansoor (+41% continuous torque/kg, 62% lower stator phase resistance).
+- **TR-2025-11 (November 2025)**: *Zero-Deadlock Decentralized Conflict-Based Search for 200+ Heterogeneous AMRs over Wi-Fi 7 TSN* — A. Patel, L. Meyer (+29% fleet throughput, 99.998% availability across 180 units).
+
+## Full Technical Documentation & Specs
+- [Full LLM Technical Reference (llms-full.txt)](https://algorohm.robotics/llms-full.txt)
+- [Robotic Platforms & Spec Inspector](https://algorohm.robotics/#platforms)
+- [Algor × Ohm Dual-Core Stack](https://algorohm.robotics/#architecture)
+- [Enterprise Fleet ROI Simulator](https://algorohm.robotics/#roi-configurator)
+- [Lab Monographs & Whitepapers](https://algorohm.robotics/#research)

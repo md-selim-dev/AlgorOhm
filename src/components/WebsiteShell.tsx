@@ -19,6 +19,7 @@ import {
   WHITEPAPERS,
 } from '../data/roboticsData';
 import { WebsitePageId } from '../types/robotics';
+import { getPageHref } from '../utils/routes';
 import { WEBSITE_NAV_ITEMS } from './Navbar';
 import { Robot3DViewer, ViewerModelId } from './Robot3DViewer';
 import { ResilientImage } from './ui/ResilientImage';
@@ -143,7 +144,11 @@ export const PageHeroHeader: React.FC<PageHeaderProps> = ({
               {config.quickLinks.map((link) => (
                 <a
                   key={link.sectionId}
-                  href={`#${link.sectionId}`}
+                  href={getPageHref(activePage, link.sectionId)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onNavigate(activePage, link.sectionId);
+                  }}
                   className="px-2.5 py-1 rounded-md bg-slate-900/90 border border-slate-800 text-slate-300 hover:text-cyan-300 hover:border-cyan-500/40 transition-colors"
                 >
                   {link.label}

@@ -213,6 +213,18 @@ export const PlatformsSection: React.FC<PlatformsSectionProps> = ({
 
                 {/* Card Body */}
                 <div className="p-4 sm:p-6 flex-1 flex flex-col justify-between space-y-4 sm:space-y-5">
+                  <meta itemProp="brand" content="AlgorOhm Robotics" />
+                  <span itemProp="offers" itemScope itemType="https://schema.org/Offer" className="hidden">
+                    <meta itemProp="priceCurrency" content="USD" />
+                    <meta
+                      itemProp="availability"
+                      content={
+                        robot.availability === 'Production Ready'
+                          ? 'https://schema.org/InStock'
+                          : 'https://schema.org/PreOrder'
+                      }
+                    />
+                  </span>
                   <p
                     itemProp="description"
                     className="text-xs sm:text-sm text-slate-300 leading-relaxed"

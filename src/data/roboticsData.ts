@@ -98,7 +98,7 @@ export const ROBOT_PLATFORMS: RobotPlatform[] = [
     image:
       'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=85',
     secondaryImage:
-      'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&w=900&q=80',
     description:
       'Built for 24/7 lights-out gigafactories and cleanroom semiconductor fabs, Vortex-AMR 400 navigates dynamic obstacles without magnetic tape or QR fiducials using multi-modal 4D LiDAR + thermal SLAM.',
     algorRole:
@@ -308,7 +308,7 @@ export const FIELD_GALLERY: FieldGalleryItem[] = [
     telemetryTag: 'PHASE_R: 0.078 mΩ @ 110°C',
     metricBadge: '+41% Torque Density',
     image:
-      'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=1200&q=85',
+      'https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&w=1200&q=85',
     caption:
       'Closed-loop dynamometer characterization verifying zero demagnetization under 380 Nm peak burst loads with silicon-carbide (SiC) 100kHz PWM switching.',
   },
@@ -321,7 +321,7 @@ export const FIELD_GALLERY: FieldGalleryItem[] = [
     telemetryTag: 'TSN_SYNC_JITTER: 140 ns',
     metricBadge: '-34% Cycle Time',
     image:
-      'https://images.unsplash.com/photo-1565043589221-1a6fd9ae45har?auto=format&fit=crop&w=1200&q=85',
+      'https://images.unsplash.com/photo-1565514020179-026b92b84bb6?auto=format&fit=crop&w=1200&q=85',
     caption:
       'Deterministic Time-Sensitive Networking (TSN) coordinates 20 autonomous units in a shared workspace without physical safety caging.',
   },

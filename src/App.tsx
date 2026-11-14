@@ -78,9 +78,17 @@ export default function App() {
     }
   }, []);
 
-  // Scroll to deep-linked section on initial load if present
+  // Scroll to deep-linked section and canonicalize legacy hash or unknown paths on initial load
   useEffect(() => {
     const initial = resolvePageFromLocation();
+    if (initial.shouldCanonicalizeUrl && typeof window !== 'undefined') {
+      const canonicalHref = getPageHref(initial.page, initial.sectionId);
+      window.history.replaceState(
+        { page: initial.page, sectionId: initial.sectionId },
+        '',
+        canonicalHref
+      );
+    }
     if (initial.sectionId) {
       requestAnimationFrame(() => {
         setTimeout(() => {
@@ -98,6 +106,14 @@ export default function App() {
     const onHashOrPopState = () => {
       const resolved = resolvePageFromLocation();
       setActivePage(resolved.page);
+      if (resolved.shouldCanonicalizeUrl && typeof window !== 'undefined') {
+        const canonicalHref = getPageHref(resolved.page, resolved.sectionId);
+        window.history.replaceState(
+          { page: resolved.page, sectionId: resolved.sectionId },
+          '',
+          canonicalHref
+        );
+      }
       if (resolved.sectionId) {
         requestAnimationFrame(() => {
           setTimeout(() => {

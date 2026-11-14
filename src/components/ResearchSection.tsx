@@ -52,6 +52,9 @@ export const ResearchSection: React.FC<ResearchSectionProps> = ({
                   <span className="shrink-0">{paper.readTime}</span>
                 </div>
                 <div className="text-[11px] font-mono text-slate-400">{paper.date}</div>
+                <meta itemProp="datePublished" content={paper.date} />
+                <meta itemProp="author" content={paper.authors} />
+                <meta itemProp="publisher" content="AlgorOhm Robotics Inc." />
                 <h3
                   itemProp="headline"
                   className="text-base sm:text-lg font-bold text-white leading-snug font-display"
